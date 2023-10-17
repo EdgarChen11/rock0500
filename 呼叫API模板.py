@@ -6,11 +6,11 @@ url = "https://api.bitopro.com/v3/tickers/usdt_twd"
 response = requests.get(url)
 
 
-headers:{
+headers = {
     "Authorization": "Bearer token",
 }
 
-body:{
+body = {
     "key": "value", 
 }
 
