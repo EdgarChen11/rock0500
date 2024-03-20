@@ -42,12 +42,12 @@ api_array = [
         "body" : None
     },
     
-    {
-        "name": "台灣期貨交易所",
-        "url": "https://openapi.taifex.com.tw/v1/DailyForeignExchangeRates",
-        "headers": None,
-        "body" : None
-    },
+    # {
+    #     "name": "台灣期貨交易所",
+    #     "url": "https://openapi.taifex.com.tw/v1/DailyForeignExchangeRates",
+    #     "headers": None,
+    #     "body" : None
+    # },
 
 ]
 
@@ -68,19 +68,19 @@ def process_response(api_name, data):
         specific_value = data.get("data").get("lastPrice")
         return specific_value
 
-    if api_name == "台灣期貨交易所":
-        latest_date = None
-        latest_usd_ntd = None
+    # if api_name == "台灣期貨交易所":
+    #     latest_date = None
+    #     latest_usd_ntd = None
 
-        for item in data:
-            date_str = item["Date"]
-            if date_str:
-                date = datetime.strptime(date_str, "%Y%m%d")
-                if latest_date is None or date >= latest_date:
-                    latest_date = date
-                    latest_usd_ntd = item["USD/NTD"]
+    #     for item in data:
+    #         date_str = item["Date"]
+    #         if date_str:
+    #             date = datetime.strptime(date_str, "%Y%m%d")
+    #             if latest_date is None or date >= latest_date:
+    #                 latest_date = date
+    #                 latest_usd_ntd = item["USD/NTD"]
 
-        return latest_usd_ntd
+        # return latest_usd_ntd
 
     return None
 
