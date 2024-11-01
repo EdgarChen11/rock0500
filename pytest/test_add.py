@@ -7,7 +7,7 @@ def add(x, y):
 def test_add():
 
     # 正＋正＝正
-    assert add(1, 2) == 3 # 1+2=3
+    assert add(1, 3) == 3 # 1+2=3
     assert add(2, 2) == 4 # 2+2=4
     
     # 正+負＝負

@@ -21,4 +21,4 @@ if response.status_code == 200:
     message = formatted_data.encode("UTF-8").decode('unicode_escape')
     print(message)
 else:
-    print(f"無法執行，狀態碼:, {response.status_code}")
+    print(f"無法執行，狀態碼:{response.status_code}")
